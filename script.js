@@ -9,7 +9,7 @@ window.onload = function () {
     var buttonStart = document.querySelector('#button-start');
     var buttonStop = document.querySelector('#button-stop');
     var buttonReset = document.querySelector('#button-reset');
-    var Interval ;
+    var Interval = 0 ;
 
     buttonStart.onclick = function(){
 
