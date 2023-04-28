@@ -1,7 +1,9 @@
 window.onload = function () {
 
+    var minutes = 00;
     var seconds = 00;
     var tens = 00; 
+    var appendMinutes = document.querySelector('#minutes');
     var appendTens = document.querySelector('#tens');
     var appendSeconds = document.querySelector('#seconds');
     var buttonStart = document.querySelector('#button-start');
@@ -51,8 +53,18 @@ window.onload = function () {
         }
 
         if (seconds > 60){
-
+            console.log("minutes");
+            minutes++;
+            appendMinutes.innerHTML = "0" + minutes;
+            seconds = 0;
+            appendSeconds.innerHTML = "0" + 0;
         }
+
+        if (minutes > 9){
+            appendMinutes.innerHTML = minutes;
+        }
+
+        clearInterval()
         
     }
 
