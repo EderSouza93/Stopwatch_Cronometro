@@ -63,10 +63,10 @@ window.onload = function () {
         if (minutes > 9){
             appendMinutes.innerHTML = minutes;
         }
-
-        clearInterval()
-        
     }
+
+
+    
 
     
 
