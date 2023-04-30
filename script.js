@@ -73,7 +73,7 @@ window.onload = function () {
             appendMinutes.innerHTML = "0" + 0;
         }
 
-        if (hours > 12){
+        if (hours > 23){
             console.log("day");
         }
     }
