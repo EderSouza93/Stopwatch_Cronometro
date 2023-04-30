@@ -1,8 +1,11 @@
 window.onload = function () {
 
+    var hours = 00;
     var minutes = 00;
     var seconds = 00;
-    var tens = 00; 
+    var tens = 00;
+
+    var appendHours = document.querySelector('#hours') 
     var appendMinutes = document.querySelector('#minutes');
     var appendTens = document.querySelector('#tens');
     var appendSeconds = document.querySelector('#seconds');
@@ -12,8 +15,6 @@ window.onload = function () {
     var Interval = 0 ;
 
     buttonStart.onclick = function(){
-
-        clearInterval(Interval);
          Interval = setInterval(startTimer, 10);
     }
 
@@ -62,6 +63,18 @@ window.onload = function () {
 
         if (minutes > 9){
             appendMinutes.innerHTML = minutes;
+        }
+
+        if (minutes > 59){
+            console.log("hours");
+            hours++;
+            appendHours.innerHTML = "0" + hours;
+            minutes = 0;
+            appendMinutes.innerHTML = "0" + 0;
+        }
+
+        if (hours > 12){
+            console.log("day");
         }
     }
 
